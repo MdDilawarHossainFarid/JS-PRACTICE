@@ -40,3 +40,20 @@ p
         console.log("exitting the reject handler 1");
     }
 );
+
+console.log("Going to register my 2nd set of handlers");
+
+p
+.then(
+    function fulfillHandler2(value) { 
+        console.log("Inside fulfill handler 2 with value", value); 
+        console.log("Promise after fullfillment is", p);
+    }, 
+    function rejectionHandler2(value) {  
+        console.log("Inside rejection handler 2 with value", value); 
+        console.log("Promise after rejection is", p);
+
+    }
+);
+
+console.log("Ending......");
