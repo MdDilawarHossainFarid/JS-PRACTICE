@@ -30,11 +30,13 @@ p
     function fulfillHandler1(value) { 
         console.log("Inside fulfill handler 1 with value", value); 
         console.log("Promise after fullfillment is", p);
+        setTimeout(function t() {console.log("Ended 0s timer")}, 0);
         console.log("exitting the full handler 1");
     }, 
     function rejectionHandler1(value) {  
         console.log("Inside rejection handler 1 with value", value); 
         console.log("Promise after rejection is", p);
+        setTimeout(function t() {console.log("Ended 0s timer")}, 0);
         console.log("exitting the reject handler 1");
     }
 );
@@ -55,3 +57,4 @@ p
 );
 
 console.log("Ending......");
+setTimeout(function() {console.log("Global timer of 0s")},0);
