@@ -7,7 +7,7 @@ function process() {
     return innerProcess; // we are not calling the function, we are just returning
 }
 
-let res = process();
+let res = process(); // this line calls the function, which returns another function
 
 console.log(res);
 
